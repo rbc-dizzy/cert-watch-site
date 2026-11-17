@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CERT-WATCH is a private monitoring tool for TLS certificates, certificate renewals, and service availability on systems administered by its owner.">
+  <meta name="theme-color" content="#101827">
+  <title>CERT-WATCH — Private infrastructure monitoring</title>
+  <style>
+    :root { color-scheme: light; --ink:#172033; --muted:#5b6474; --line:#e3e8ef; --accent:#2457c5; --bg:#f5f7fb; --panel:#fff; }
+    * { box-sizing:border-box; }
+    body { margin:0; font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--ink); background:var(--bg); }
+    header { background:#101827; color:#fff; padding:20px 24px; }
+    .nav, main, footer { max-width:900px; margin:0 auto; }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { font-weight:750; letter-spacing:.08em; }
+    .nav a { color:#dce6ff; text-decoration:none; }
+    main { padding:64px 24px 72px; }
+    .eyebrow { color:var(--accent); font-weight:700; font-size:.82rem; letter-spacing:.12em; text-transform:uppercase; }
+    h1 { font-size:clamp(2.2rem,6vw,3.6rem); line-height:1.1; letter-spacing:-.04em; margin:.5rem 0 1.1rem; }
+    .lead { max-width:720px; color:var(--muted); font-size:1.2rem; }
+    .card { margin-top:34px; background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:26px; box-shadow:0 8px 28px rgba(19,35,65,.045); }
+    h2 { margin:0 0 12px; font-size:1.25rem; }
+    ul { padding-left:22px; }
+    li { margin:.48rem 0; }
+    .links { display:flex; gap:18px; flex-wrap:wrap; margin-top:26px; }
+    .links a { display:inline-block; padding:11px 16px; border-radius:10px; background:var(--accent); color:#fff; text-decoration:none; font-weight:650; }
+    .links a.secondary { background:#eaf0ff; color:#173d91; }
+    footer { border-top:1px solid var(--line); padding:22px 24px 32px; color:var(--muted); font-size:.92rem; }
+    a { color:var(--accent); }
+    @media (max-width:560px) { main { padding-top:42px; } .nav { align-items:flex-start; flex-direction:column; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">CERT-WATCH</div>
+      <a href="privacy.html">Privacy policy</a>
+    </div>
+  </header>
+  <main>
+    <div class="eyebrow">Private infrastructure monitoring</div>
+    <h1>Know when certificates or services need attention.</h1>
+    <p class="lead">CERT-WATCH is a personal monitoring tool used by its owner to check TLS certificates, certificate-renewal activity, and selected service health on servers and infrastructure the owner administers.</p>
+
+    <section class="card">
+      <h2>What CERT-WATCH does</h2>
+      <ul>
+        <li>Collects certificate metadata, expiry dates, certificate/key match results, and TLS endpoint checks.</li>
+        <li>Observes selected service states and certificate-renewal timers or job results.</li>
+        <li>Stores monitoring reports, history, and incident state locally on the owner's private NAS.</li>
+        <li>Is designed to send email alerts to the configured owner address when a monitored issue requires attention.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Google account access</h2>
+      <p>Email notifications are planned but are not currently enabled. If enabled in the future, CERT-WATCH will use Google's Gmail API with the <code>gmail.send</code> permission solely to send monitoring notifications on the owner's behalf. It will not use this permission to read, search, modify, or delete Gmail messages.</p>
+      <p>Any OAuth credentials and refresh tokens used by CERT-WATCH are intended to be kept on the owner's NAS with access restricted to the system administrator. Monitoring data is not used for advertising, sold, or shared with data brokers.</p>
+    </section>
+
+    <div class="links">
+      <a href="privacy.html">Read the privacy policy</a>
+    </div>
+  </main>
+  <footer>© 2026 CERT-WATCH · Personal-use software · For support, use the contact email shown on the Google OAuth consent screen.</footer>
+</body>
+</html>
